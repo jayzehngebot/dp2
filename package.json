@@ -1,0 +1,22 @@
+{
+  "name": "dp2",
+  "version": "1.0.0",
+  "description": "deadpods2",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "type": "module",
+  "author": "jay zehngebot",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/static": "^7.0.4",
+    "@fastify/view": "^9.1.0",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.28.1",
+    "fastify-static": "^4.7.0",
+    "handlebars": "^4.7.8",
+    "node-cache": "^5.1.2",
+    "point-of-view": "^6.3.0"
+  }
+}

@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeadPods</title>
+    <link rel="stylesheet" href="/public/style.css">
+    <meta name="description" content="DeadPods : Where Stellar Pods Live Forever">
 </head>
 <body>
-    <h1>Data: {{data}}</h1>
-    
+
+
+    {{#*inline "myPartial"}}
+    <div>
+        <ul>
+            <li>Title: {{podcast}}</li>
+            <li>Essential Episode: {{episodeURL}}</li>
+            <li>Podcast DateRange: {{dateRange}}</li>
+            <li>Comments: {{comments}}</li>
+        </ul>
+    </div>
+    {{/inline}}
+
+    {{#each data}}
+        {{> myPartial}}
+    {{/each}}
+
 </body>
 </html>

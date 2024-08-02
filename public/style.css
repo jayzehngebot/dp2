@@ -1,5 +1,116 @@
-/* public/style.css */
+/* Dark Mode Stylesheet */
+
+/* General */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-  }
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text color */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  color: #1e90ff; /* Light blue color for links */
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff; /* White text for headings */
+}
+
+div {
+  margin-bottom:20px;
+}
+/* Buttons */
+button, .button {
+  background-color: #1e1e1e; /* Dark background for buttons */
+  color: #ffffff; /* Light text color */
+  border: 1px solid #333333; /* Border color */
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .button:hover {
+  background-color: #333333; /* Slightly lighter on hover */
+}
+
+/* Inputs and Textareas */
+input, textarea {
+  background-color: #1e1e1e; /* Dark background */
+  color: #ffffff; /* Light text */
+  border: 1px solid #333333; /* Border color */
+  padding: 10px;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #888888; /* Placeholder text color */
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #333333; /* Border color */
+}
+
+th {
+  background-color: #1e1e1e; /* Dark background for table headers */
+  color: #ffffff; /* Light text */
+}
+
+tr:nth-child(even) {
+  background-color: #1a1a1a; /* Alternating row color */
+}
+
+/* Forms */
+form {
+  margin: 20px 0;
+}
+
+/* Code Blocks */
+pre, code {
+  background-color: #2e2e2e; /* Dark background for code blocks */
+  color: #ffffff; /* Light text color */
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Cards */
+.card {
+  background-color: #1e1e1e; /* Dark background for cards */
+  color: #ffffff; /* Light text */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}

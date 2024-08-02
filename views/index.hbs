@@ -11,12 +11,13 @@
 
 
     {{#*inline "myPartial"}}
-    <div>
+    <div class="podcard">
         <ul>
-            <li>Title: {{podcast}}</li>
-            <li>Essential Episode: {{episodeURL}}</li>
-            <li>Podcast DateRange: {{dateRange}}</li>
-            <li>Comments: {{comments}}</li>
+            <li class="title">{{podcast}} : {{Born}} - {{Died}}</li>
+            <li class="episode">
+                Essential Episode: <a href="{{episodeURL}}" target="_blank">{{essentialEpisodeTitle}}</a>
+            </li>
+            <li class="comments">{{comments}}</li>
         </ul>
     </div>
     {{/inline}}

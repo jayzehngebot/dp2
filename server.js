@@ -38,8 +38,6 @@ fastify.get('/', async function handler (request, reply) {
 
   if ( podData == undefined ){
 
-      // console.log("data Undefined - fetch data");
-
       let apiKey = process.env.GOOGLE_SHEETS_API_KEY;
       let sheetName = process.env.SHEET_NAME;
       let spreadsheetId = process.env.SHEET_ID;
@@ -63,9 +61,11 @@ fastify.get('/', async function handler (request, reply) {
   // DEFINE KEY MAPPINGS
   const keyMappings = {
     Podcast: "podcast",
-    Episode: "episodeURL",
-    DateRange: "dateRange",
-    Comments: "comments"
+    EssentialEpURL: "episodeURL",
+    EssentialEpTitle: "essentialEpisodeTitle",
+    Born: "Born",
+    Died: "Died",
+    Comments: "comments",
   };
   
   // TRANSFORM DATA
@@ -79,15 +79,14 @@ fastify.get('/', async function handler (request, reply) {
   
   const transformedData = rows.map(transformData);
   
-  // console.log(transformedData);
   // reply.send(podData);
   return reply.view('/index', { title: 'Home', data: transformedData });
 })
 
 // RUN SERVER
-try {
-  await fastify.listen({ port: 3000 })
-} catch (err) {
-  fastify.log.error(err)
-  process.exit(1)
-}
+fastify.listen({ port: 3000, host: '0.0.0.0' }, (err, address) => {
+  if (err) {
+    fastify.log.error(err)
+    process.exit(1)
+  }
+});

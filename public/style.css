@@ -8,6 +8,9 @@ body {
   line-height: 1.6;
 }
 
+li{
+  list-style-type: none;
+}
 /* Links */
 a {
   color: #1e90ff; /* Light blue color for links */
@@ -26,6 +29,13 @@ h1, h2, h3, h4, h5, h6 {
 div {
   margin-bottom:20px;
 }
+
+.podcard {
+  border: 1px solid #333333; /* Border color */
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
 /* Buttons */
 button, .button {
   background-color: #1e1e1e; /* Dark background for buttons */
